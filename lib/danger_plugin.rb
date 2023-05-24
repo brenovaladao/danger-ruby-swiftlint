@@ -67,6 +67,9 @@ module Danger
       # Fails if swiftlint isn't installed
       raise 'swiftlint is not installed' unless swiftlint.installed?
 
+      swiftlint_version = ENV['SWIFTLINT_VERSION']
+      puts "Version: #{swiftlint_version}"
+
       config_file_path = config_file
       if config_file_path
         log "Using config file: #{config_file_path}"
